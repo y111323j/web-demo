@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				background-color: purple;
+				position: absolute; 
+				padding: 30px;
+				animation-name: myfirst;
+				animation-delay: 0.5s;
+				animation-iteration-count: infinite;
+				animation-duration:3s; 
+				animation-direction: alternate;       
+				transition: width 2s, height 2s, transform 2s;
+				border-radius: 100%;
+			}
+			@keyframes myfirst{  
+				0%{background: purple; left:300px; top:100px;}         
+				25% {background: yellow; left:500px; top:100px;}         
+				50% {background: blue; left:700px; top:100px;}         
+				75% {background: green; left:900px; top:100px;}        
+				100% {background: purple; left:1100px; top:100px;}   
+			}
+			div:hover {
+			    width: 100px;
+			    height: 100px;
+			    transform: rotate(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
