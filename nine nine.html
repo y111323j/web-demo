@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var sum=0;
+			for (var i=1;i<10;i++) {
+				for (var j=1;j<=i;j++){
+					sum=j*i;
+					document.write("<span>"+j+"*"+i+"="+sum+"</span>");
+					document.write("&nbsp;");
+				}
+				document.write("<br />")	
+			}
+		</script>
+		<style>
+			body{
+				width: 2000px;
+			}
+			span{
+				display: inline-block;
+				width: 60px;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>
