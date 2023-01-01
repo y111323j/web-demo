@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<center>
+		<style>
+			div {
+				font-size :20px;
+				width: 200px;
+				height: 60px;
+			}
+			.box {
+				box-align: center;
+				width: 60px;
+				height: 30px;
+			}
+		</style>
+		</center>
+	</head>
+	<body>
+		<center>
+		<header>注册</header>
+		<form action="" method="post" >
+			<div>姓名:<input type="text" id="user" placeholder="请输入你的姓名..."/></div>
+			<div>生日:<input type="text" id="birth" placeholder="请输入你的生日..."/></div>
+			<div>密码: <input type="password" id="keyword" placeholder="请输入你的密码..."/></div>
+			<div>确认密码: <input type="password" id="keyword" placeholder="请确认..."/></div>
+			<input type="button" value="注册" onclick="pass()" class="box"/>
+			<input type="reset" value="重置" class="box"/>
+		</form>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById("keyword")
+			}
+
+			function pass() {
+				var password = document.getElementById("keyword").value;
+				if (password.length < 6) {
+					alert("不符合规则")
+					return;
+				} else {
+					var count = 0
+					for (var i = 0; i < password.length; i++) {
+						if ((password[i] >= 'a' && password[i] <= 'z') || (password[i] >= 'A' && password[i] <= 'Z')) {
+							count++;
+						}
+					}
+					if (count >= 2) {
+						alert("输入合法")
+					} else {
+						alert("密码必须含有两位字母")
+					}
+				}
+				alert("姓名是：" + (document.getElementById("user").value) + "密码是：" + (document.getElementById("keyword").value))
+			}
+		</script>
+		</center>
+	</body>
+</html>
